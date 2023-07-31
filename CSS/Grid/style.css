@@ -1,0 +1,102 @@
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-auto-columns: 500px; */
+  /* grid-template-rows: 100px; */
+  grid-auto-rows: 300px;
+}
+
+.grid-item {
+  position: relative;
+}
+
+.grid-item::before {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 0%;
+  transition: all 0.5s;
+  background-color: rgba(0, 0, 0, 0.211);
+}
+
+.grid-item:hover::before {
+  height: 100%;
+  width: 100%;
+}
+
+/* .grid-item > img {
+  object-fit: cover;
+} */
+
+.grid-item:nth-of-type(1) {
+  background-color: black;
+  /* grid-row-start: 1;
+  grid-row-end: 3; */
+  grid-row: 1 /3;
+  background-image: url("https://images.pexels.com/photos/17075271/pexels-photo-17075271/free-photo-of-a-person-holding-a-puppy.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-item:nth-of-type(2) {
+  /* grid-column-start: 2;
+    grid-column-end: 4; */
+  /* grid-row-start: 1;
+    grid-row-end: 3; */
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+  overflow: hidden;
+  background-image: url("https://images.pexels.com/photos/9577760/pexels-photo-9577760.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .grid-item:nth-of-type(2) > video {
+  width: calc(100vw - );
+} */
+
+.grid-item:nth-of-type(3) {
+  /* grid-column-start: 1;
+    grid-column-end: 3; */
+  /* grid-row-start: 3;
+    grid-row-end: 5; */
+  grid-column: 1 / 3;
+  grid-row: 3 / 5;
+  background-color: black;
+  background-image: url("https://images.pexels.com/photos/5319625/pexels-photo-5319625.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-item:nth-of-type(4) {
+  grid-row: 3 / 5;
+  background-image: url("https://images.pexels.com/photos/10797470/pexels-photo-10797470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-item:nth-of-type(4) {
+  grid-row: 3 / 5;
+  background-image: url("https://images.pexels.com/photos/10797470/pexels-photo-10797470.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-item:nth-of-type(5) {
+  background-image: url("https://images.pexels.com/photos/1643457/pexels-photo-1643457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-item:nth-of-type(6) {
+  background-image: url("https://images.pexels.com/photos/15445009/pexels-photo-15445009/free-photo-of-kitten-in-the-window-sill.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.grid-item:nth-of-type(7) {
+  background-image: url("https://images.pexels.com/photos/45170/kittens-cat-cat-puppy-rush-45170.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
