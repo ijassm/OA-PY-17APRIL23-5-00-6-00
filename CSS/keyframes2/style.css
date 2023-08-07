@@ -1,0 +1,160 @@
+body {
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(209, 228, 234, 1) 0%,
+    rgba(186, 228, 244, 1) 100%
+  );
+}
+
+.sun {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  translate: -50%;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #ff9845;
+  box-shadow: 0 0 50px rgba(255, 153, 68, 0.7);
+  animation-name: sun;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.road {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100px;
+  background-color: #797979;
+}
+
+.road::before {
+  --width: 200px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  height: 10px;
+  width: var(--width);
+  background-color: antiquewhite;
+  box-shadow: calc(var(--width) * 1.5) 0px antiquewhite,
+    calc(var(--width) * 3) 0px antiquewhite,
+    calc(var(--width) * 4.5) 0px antiquewhite,
+    calc(var(--width) * 6) 0px antiquewhite;
+}
+
+.car1 {
+  position: absolute;
+  top: -13%;
+  right: 0%;
+  width: 100%;
+  max-width: 200px;
+  animation-name: car1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  /* animation-direction: a; */
+}
+
+.car2 {
+  position: absolute;
+  bottom: -10%;
+  left: 0%;
+  width: 100%;
+  max-width: 200px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  animation-name: car2;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  /* animation-direction: alternate; */
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  max-width: 300px;
+}
+
+.cloud1 {
+  left: 0%;
+  animation-name: cloud1;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  z-index: 1;
+}
+
+.cloud2 {
+  right: 0%;
+  animation-name: cloud2;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  z-index: 1;
+}
+
+.hill {
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: -20%;
+  background-color: #acde61;
+  border-radius: 50%;
+}
+
+.hill::before {
+  content: "";
+  position: absolute;
+  left: -30%;
+  bottom: -40%;
+  height: 600px;
+  width: 1400px;
+  border-radius: 50%;
+  background-color: #92cd3a;
+}
+
+.hill::after {
+  content: "";
+  position: absolute;
+  right: -30%;
+  bottom: -50%;
+  height: 600px;
+  width: 1400px;
+  border-radius: 50%;
+  background-color: rgb(136, 176, 76);
+}
+
+@keyframes sun {
+  to {
+    box-shadow: 0 0 70px rgba(255, 238, 0, 0.7);
+  }
+}
+
+@keyframes car1 {
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes car2 {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes cloud1 {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes cloud2 {
+  to {
+    right: 100%;
+  }
+}
