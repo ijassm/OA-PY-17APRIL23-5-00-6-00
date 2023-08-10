@@ -1,0 +1,21 @@
+.myImage {
+  max-width: 200px;
+}
+
+article {
+  border: 1px solid transparent;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+article:hover {
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.159);
+  border: 1px solid rgb(0, 224, 198);
+}
+
+// @media (max-width: 576px) {
+//   /* Apply styles only on screens with a maximum width of 576px (small screens) */
+//   .text-center-sm {
+//     text-align: center;
+//   }
+// }
