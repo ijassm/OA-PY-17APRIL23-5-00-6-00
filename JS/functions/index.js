@@ -18,3 +18,10 @@ function trigger() {
   console.log(h1[0]);
   // console.log(window.document);
 }
+
+const doc = document;
+
+function inc() {
+  const h1 = doc.getElementsByTagName("h1")[0];
+  h1.textContent = Number(h1.textContent) + 1;
+}
