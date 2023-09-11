@@ -40,8 +40,8 @@
 //   console.log("IIFE");
 // })();
 
-const l1 = [1, 5, 2, 3, 0];
-const l2 = [4, 6, 1, 2];
+// const l1 = [1, 5, 2, 3, 0];
+// const l2 = [4, 6, 1, 2];
 
 // function sum(a, b) {
 //   console.log(a + b);
@@ -73,6 +73,13 @@ const l2 = [4, 6, 1, 2];
 // console.log(product(4, 5, 2));
 // console.log(product(4, 5, 6, 8));
 
+// function sum(output, i) {
+//   return output + i;
+// }
+
+const l1 = [1, 5, 2, 3, 0];
+const l2 = [4, 6, 1, 2];
+
 function hof(l, logicFunc, initialValue = 0) {
   let output = initialValue;
   for (const i of l) {
@@ -82,11 +89,7 @@ function hof(l, logicFunc, initialValue = 0) {
   return output;
 }
 
-// function sum(output, i) {
-//   return output + i;
-// }
-
-const s = hof(l1, (o, i) => o + i);
+const s = hof(l1, (o, i) => o + i, 5);
 const m = hof(l1, (o, i) => o * i, 1);
 
 console.log(s);
