@@ -1,10 +1,10 @@
 // contructor function
 
-// function Person(fname, lname, age) {
-//   this.firstname = fname;
-//   this.lastname = lname;
-//   this.age = age;
-// }
+function Person(fname, lname, age) {
+  this.firstname = fname;
+  this.lastname = lname;
+  this.age = age;
+}
 
 // factory function
 
@@ -19,6 +19,6 @@ function Person(fname, lname, age) {
 // Person.prototype.a = "gh";
 
 // const obj1 = new Person("ocean", "academy", 10);
-const obj1 = Person("ocean", "academy", 10);
+// const obj1 = Person("ocean", "academy", 10);
 
-console.log(obj1);
+// console.log(obj1);
