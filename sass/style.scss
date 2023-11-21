@@ -1,0 +1,24 @@
+@import "./variables";
+@import "./classes";
+@import "./mixins";
+
+body {
+  @extend .center;
+  min-height: 100vh;
+  margin: 0%;
+  background-color: $primary;
+  .box1 {
+    @extend .center;
+    @include box(calc($size + 300), aqua);
+
+    .box2 {
+      @extend .center;
+      @include box(calc($size + 200));
+
+      .box3 {
+        @extend .center;
+        @include box(calc($size + 100), aqua);
+      }
+    }
+  }
+}

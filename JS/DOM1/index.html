@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .box {
+        flex-grow: 1;
+        flex-basis: 300px;
+        color: white;
+        text-align: center;
+        margin: 10px;
+        padding: 30px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.2s;
+        border: 2px solid transparent;
+      }
+
+      .box:hover {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.847);
+        border: 2px solid white;
+      }
+
+      .bg-grey {
+        background-color: rgb(59, 59, 59);
+      }
+
+      .bg-grey:hover {
+        background-color: rgb(43, 43, 43);
+      }
+
+      .bg-pink {
+        background-color: hotpink;
+      }
+
+      .bg-pink:hover {
+        background-color: rgb(254, 82, 168);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <a href="https://www.google.com/" target="_blank">google</a> -->
+    <script src="index.js"></script>
+  </body>
+</html>
